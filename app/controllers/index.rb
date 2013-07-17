@@ -9,11 +9,32 @@ post '/' do
   redirect to("/")
 end
 
+get '/categories' do 
+  redirect to("/")
+end
+
 get '/categories/new' do
-  erb :new
+  erb :"category/new"
 end
 
 get '/categories/:id' do
   @category = Category.find(params[:id])
-  erb :show
+  erb :"category/show"
+end
+
+get '/categories/:id/edit' do
+  @category = Category.find(params[:id])
+  erb :"category/edit"
+end
+
+post '/categories/:id' do
+  @category = Category.find(params[:id])
+  @category.update_attributes(params[:category])
+  redirect to("/")
+end
+
+get '/categories/:id/delete' do
+  @category = Category.find(params[:id])
+  @category.destroy
+  redirect to('/')
 end
