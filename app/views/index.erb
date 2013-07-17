@@ -5,8 +5,14 @@
 
 <ul>
   <% @categories.each do |category| %>
-    <li><a href="/<%= category.name %>"><%= category.name %></a></li>
+    <li>
+      <a href="/categories/<%= category.id %>"><%= category.name %></a>
+      <a class="modify" href="/categories/<%= category.id %>/edit">Edit</a>
+      <a class="modify" href="/categories/<%= category.id %>/delete">Delete</a>
+    </li>
   <% end %>
 </ul>
+
+<a href="/categories/new">+ Add New Category</a>
 
 

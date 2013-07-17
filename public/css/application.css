@@ -30,6 +30,11 @@ a {
   font-size: 3em;
 }
 
+a.modify {
+  font-size: 14px;
+  color: black;
+}
+
 ul {
   padding-left: 35%;
   font-family: cursive;

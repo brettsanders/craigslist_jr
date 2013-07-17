@@ -4,9 +4,16 @@ get '/' do
   erb :index
 end
 
-get '/:category' do
-  category = Category.find_by_name(params[:category])
-  @posts = category.posts
+post '/' do
+  Category.create(params[:category])
+  redirect to("/")
+end
 
-  erb :category
+get '/categories/new' do
+  erb :new
+end
+
+get '/categories/:id' do
+  @category = Category.find(params[:id])
+  erb :show
 end

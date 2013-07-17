@@ -3,9 +3,9 @@
 end
 
 cars = Category.find(1)
-cars.posts.create(title:"Sweet ass E30 for Sale",text:"This E30 is dope. Almost all original. S54 engine.",price:30000)
+cars.posts.create(title:"Sweet ass E30 for Sale",text:"This E30 is dope. Almost all original. S54 engine.",price:3000)
 19.times do
-  cars.posts.create(title:Faker::Lorem.sentence, text: Faker::Lorem.paragraph, price: rand(100..100000))
+  cars.posts.create(title:Faker::Lorem.sentence, text: Faker::Lorem.paragraph, price: rand(100..10000))
 end
 
 guns = Category.find(2)
@@ -24,7 +24,7 @@ end
 keytars = Category.find(4)
 keytars.posts.create(title:"A dope keytar to shred on",text:"Can be played like Jimmi Hendrix but a little different",price:300)
 19.times do
-  keytars.posts.create(title:Faker::Lorem.sentence, text: Faker::Lorem.paragraph, price: rand(100..10000))
+  keytars.posts.create(title:Faker::Lorem.sentence, text: Faker::Lorem.paragraph, price: rand(100..1000))
 end
 
 
