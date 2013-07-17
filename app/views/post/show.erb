@@ -1,0 +1,12 @@
+<h1><%= @post.title %> ($<%= @post.price %>)</h1>
+
+<p><%= @post.text %></p>
+<br>
+<p>First Posted: <%= @post.created_at %></p>
+<p>Updated: <%= @post.updated_at %></p>
+<br>
+<br>
+<a href="/categories/<%= @post.category.id %>/posts/<%= @post.id %>/edit">Edit Listing</a>
+<a href="/categories/<%= @post.category.id %>/posts/<%= @post.id %>/delete">Delete Listing</a>
+
+

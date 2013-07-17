@@ -26,13 +26,11 @@ header {
 
 a {
   text-decoration: none;
-  color: red;
-  font-size: 3em;
 }
 
 a.modify {
   font-size: 14px;
-  color: black;
+  color: blue;
 }
 
 ul {

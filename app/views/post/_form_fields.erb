@@ -1,0 +1,11 @@
+<label for="title">Title:</label>
+<input id="title" type="text" name="post[name]" value="<%=@post.try(:title)%>">
+<br>
+<label for="text">Text:</label>
+<input id="text" type="textarea" name="post[text]" value="<% @post.try(:text)%>">
+<br>
+<label for="text">Price:</label>
+<input id="text" type="text" name="post[price]" value="<% @post.try(:price)%>">
+<br>
+<input type="submit">
+<br>

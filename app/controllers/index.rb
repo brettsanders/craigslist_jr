@@ -19,6 +19,7 @@ end
 
 get '/categories/:id' do
   @category = Category.find(params[:id])
+  @posts = @category.posts
   erb :"category/show"
 end
 
@@ -38,3 +39,17 @@ get '/categories/:id/delete' do
   @category.destroy
   redirect to('/')
 end
+
+get '/categories/:id/posts/new' do
+  erb :"post/new"
+end
+
+get '/categories/:id/posts/:postid' do
+  @post = Post.find(params[:postid])
+  params.inspect
+  erb :"post/show"
+end
+
+# get '*' do 
+#   redirect to('/')
+# end
