@@ -21,17 +21,16 @@
         <td>$<%= post.price %></td>
         <td><%= post.updated_at %></td>
         <td>
-          <a class="modify" href="#" title="#">Edit</a>
+          <a class="modify" href="/categories/<%= @category.id %>/posts/<%= post.id %>/edit" title="#">Edit</a>
         </td>
         <td>
-          <form action="#" method="POST">
-            <input type="submit" value="Delete">
-          <form>
+          <a class="modify" href="/categories/<%= @category.id %>/posts/<%= post.id %>/delete" title="#">Delete</a>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<a href="/">Back</a>
 
 
 

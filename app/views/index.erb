@@ -3,16 +3,20 @@
   <h2>Categories</h2>
 </header>
 
-<ul>
-  <% @categories.each do |category| %>
-    <li>
-      <a href="/categories/<%= category.id %>"><%= category.name %></a>
-      <a class="modify" href="/categories/<%= category.id %>/edit">Edit</a>
-      <a class="modify" href="/categories/<%= category.id %>/delete">Delete</a>
-    </li>
-  <% end %>
-</ul>
+<div class="content">
+  <ul>
+    <% @categories.each do |category| %>
+      <li>
+        <a href="/categories/<%= category.id %>"><%= category.name %></a>
+        <a class="modify" href="/categories/<%= category.id %>/edit">Edit</a>
+        <a class="modify" href="/categories/<%= category.id %>/delete">Delete</a>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-<a href="/categories/new">+ Add New Category</a>
+<div class="bottom-nav">
+  <a href="/categories/new">+ Add New Category</a>
+</div>
 
 

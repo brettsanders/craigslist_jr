@@ -25,12 +25,15 @@ header {
 }
 
 a {
+  font-family: cursive;
+  font-size: 35px;
   text-decoration: none;
+  color: black;
 }
 
 a.modify {
   font-size: 14px;
-  color: blue;
+  color: black;
 }
 
 ul {
@@ -38,8 +41,24 @@ ul {
   font-family: cursive;
 }
 
+.logo{
+  size: 25px;
+  text-align: center;
+  color: red;
+  font-family: courier;
+}
 
 ul li {
   list-style: none;
 
+}
+
+.content {
+  font-size: 30px;
+  color: black;
+}
+
+.bottom-nav {
+  text-align: center;
+  font-size: 25px;
 }

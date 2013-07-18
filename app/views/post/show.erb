@@ -1,3 +1,5 @@
+<h1><a href="/categories/<%= @category.id %>"><%= @category.name %></a></h1>
+
 <h1><%= @post.title %> ($<%= @post.price %>)</h1>
 
 <p><%= @post.text %></p>
@@ -8,5 +10,7 @@
 <br>
 <a href="/categories/<%= @post.category.id %>/posts/<%= @post.id %>/edit">Edit Listing</a>
 <a href="/categories/<%= @post.category.id %>/posts/<%= @post.id %>/delete">Delete Listing</a>
+<br>
+<a href="/categories/<%= @post.category.id %>">Back</a>
 
 

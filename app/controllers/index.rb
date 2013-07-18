@@ -63,15 +63,8 @@ end
 
 # Post#create
 post '/categories/:id/posts' do
-  # params[:post]
-  # p params[:id]
-  # p "#{params[:post]}"
-  # hash = { params[:post], category_id: params[:id] }
-  # p hash
   @post = Post.create( params[:post] )
-  erb :"post/show"
-  
-  
+  redirect to("/categories/#{params[:id]}/posts/#{@post.id}")
 end
 
 # Post#show
@@ -79,6 +72,27 @@ get '/categories/:id/posts/:postid' do
   @category = Category.find(params[:id])
   @post = Post.find(params[:postid])
   erb :"post/show"
+end
+
+# Post#edit
+get '/categories/:id/posts/:postid/edit' do
+  @category = Category.find(params[:id])
+  @post = Post.find(params[:postid])
+  erb :"post/edit"
+end
+
+# Post#update
+post '/categories/:id/posts/:postid' do 
+  @post = Post.find( params[:postid] )
+  @post.update_attributes( params[:post] )
+  redirect to("/categories/#{params[:id]}/posts/#{@post.id}")
+end
+
+# Post#delete
+get '/categories/:id/posts/:postid/delete' do
+  @post = Post.find(params[:postid])
+  @post.destroy
+  redirect to("/categories/#{params[:id]}")
 end
 
 

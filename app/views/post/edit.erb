@@ -1,0 +1,4 @@
+<form action="/categories/<%= @post.category.id %>/posts/<%= @post.id %>" method="post">
+  <%= erb :"post/_form_fields", layout: false%>
+</form>
+<a href="/categories/<%= @post.category.id %>/posts/<%= @post.id %>">Back</a>
